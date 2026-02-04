@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>will you be my valentine?💕😁</title>
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
+
+  .box {
+    background: white;
+    padding: 40px 50px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+    z-index: 1;
+  }
+
+  h1 {
+    color: #ff4d6d;
+    margin-bottom: 30px;
+  }
+
+  button {
+    padding: 12px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 10px;
+  }
+
+  #yes {
+    background: #ff4d6d;
+    color: white;
+  }
+
+  #no {
+    background: #bfbfbf;
+    position: absolute;
+  }
+
+  .hearts {
+    font-size: 28px;
+    margin-top: 15px;
+    animation: float 2s infinite ease-in-out;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+  }
+</style>
+</head>
+
+<body>
+
+<div class="box" id="box">
+  <h1>will you be my valentine? aesa to sabb puchte he par me aapse puchta hu kya App meri Dharm Patnii banogii??❤️😁💕💖👧🏻</h1>
+  <button id="yes">Yes ❤️</button>
+  <button id="no">No 😜</button>
+</div>
+
+<script>
+  const noBtn = document.getElementById("no");
+  const yesBtn = document.getElementById("yes");
+  const box = document.getElementById("box");
+
+  noBtn.addEventListener("mouseenter", () => {
+    const maxX = window.innerWidth - noBtn.offsetWidth;
+    const maxY = window.innerHeight - noBtn.offsetHeight;
+
+    const x = Math.random() * maxX;
+    const y = Math.random() * maxY;
+
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+  });
+
+  yesBtn.addEventListener("click", () => {
+    box.innerHTML = `
+      <h1>Lovvvveeee youuuuuuu myyyyyy Chhhiiiiikkkkkkkuuuuuuuuuuuddddddiiiiiiiiiiii😁💕💘</h1>
+      <div class="hearts">❤️ 💖 💕 💞 💓 💗</div>
+    `;
+  });
+</script>
+
+</body>
+</html>
